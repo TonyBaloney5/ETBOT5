@@ -9,7 +9,7 @@ import random
 import uvicorn
 from fastapi import FastAPI
 from discord.ext.commands import cooldown
-
+import threading
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -23,14 +23,17 @@ intents.members = True
 bot = commands.Bot(command_prefix='ET?', intents=intents)
 
 app = FastAPI()
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+@app.get("/ping")
+def ping():
+    return {"status": "Alive"}
+def run_discord_bot():
+    
+    if __name__ == '__main__':
+        bot.run(DISCORD_TOKEN)
+bot_thread = threading.Thread(target=run_discord_bot)
+bot_thread.start()
 
-if __name__ == "__main__":
-    # Get the port from the environment variable or use a default for local development
-    port = int(os.environ.get("PORT", 10000)) 
-    uvicorn.run(app, host="0.0.0.0", port=port)
+uvicorn.run(app, host="0.0.0.0", port=10000)
 
 @bot.event
 async def on_ready():
@@ -86,6 +89,7 @@ async def on_command_error(ctx, error):
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
