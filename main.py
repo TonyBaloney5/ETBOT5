@@ -22,7 +22,7 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='ET?', intents=intents)
 
-app = fastapi()
+app = FastAPI()
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
@@ -86,6 +86,7 @@ async def on_command_error(ctx, error):
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
