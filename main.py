@@ -22,19 +22,6 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='ET?', intents=intents)
 
-app = FastAPI()
-@app.get("/ping")
-def ping():
-    return {"status": "Alive"}
-def run_discord_bot():
-    
-    if __name__ == '__main__':
-        bot.run(DISCORD_TOKEN)
-bot_thread = threading.Thread(target=run_discord_bot)
-bot_thread.start()
-
-uvicorn.run(app, host="0.0.0.0", port=10000)
-
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user.name}")
@@ -89,6 +76,20 @@ async def on_command_error(ctx, error):
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
+app = FastAPI()
+@app.get("/ping")
+def ping():
+    return {"status": "Alive"}
+def run_discord_bot():
+    
+    if __name__ == '__main__':
+        bot.run(DISCORD_TOKEN)
+bot_thread = threading.Thread(target=run_discord_bot)
+bot_thread.start()
+
+uvicorn.run(app, host="0.0.0.0", port=10000)
+
 
 
 
