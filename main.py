@@ -7,7 +7,7 @@ import webserver
 from flask import ctx
 import random
 import uvicorn
-import fastapi
+from fastapi import FastAPI
 from discord.ext.commands import cooldown
 
 from dotenv import load_dotenv
@@ -86,6 +86,7 @@ async def on_command_error(ctx, error):
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
