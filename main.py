@@ -13,6 +13,13 @@ from dotenv import load_dotenv
 load_dotenv()
 DISCORD_TOKEN = os.environ['discordkey']
 
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+uvicorn main:app --host 0.0.0.0 --port 8080 --reload
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 intents = discord.Intents.default()
@@ -71,8 +78,15 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
         msg = 'You are on cooldown, please try again in **{:.2f}**s.'.format(error.retry_after)
         await ctx.send(msg)
+
+if __name__ == "__main__":
+    # Get the port from the environment variable or use a default for local development
+    port = int(os.environ.get("PORT", 10000)) 
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
