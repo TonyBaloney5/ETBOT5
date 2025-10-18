@@ -13,6 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 DISCORD_TOKEN = os.environ['discordkey']
 
+port = int(os.environ.get('PORT', 8080))
+
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 intents = discord.Intents.default()
 intents.message_content = True
@@ -72,5 +74,6 @@ async def on_command_error(ctx, error):
         await ctx.send(msg)
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
