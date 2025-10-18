@@ -29,7 +29,7 @@ def read_root():
 
 if __name__ == "__main__":
     # Get the port from the environment variable or use a default for local development
-    port = int(os.environ.get("PORT", 10000)) 
+    port = int(os.environ.get("PORT", 8080)) 
     uvicorn.run(app, host="0.0.0.0", port=port)
 
 @bot.event
@@ -86,6 +86,7 @@ async def on_command_error(ctx, error):
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
