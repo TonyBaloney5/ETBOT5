@@ -6,6 +6,8 @@ import os
 import webserver
 from flask import ctx
 import random
+import uvicorn
+import fastapi
 from discord.ext.commands import cooldown
 
 from dotenv import load_dotenv
@@ -19,6 +21,14 @@ intents.message_content = True
 intents.members = True
 
 bot = commands.Bot(command_prefix='ET?', intents=intents)
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+uvicorn main:app --host 0.0.0.0 --port 8080 --reload
 
 @bot.event
 async def on_ready():
@@ -78,6 +88,7 @@ if __name__ == "__main__":
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
