@@ -19,8 +19,6 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
-uvicorn main:app --host 0.0.0.0 --port 8080 --reload
-
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 intents = discord.Intents.default()
 intents.message_content = True
@@ -86,6 +84,7 @@ if __name__ == "__main__":
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
