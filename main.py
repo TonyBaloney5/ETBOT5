@@ -13,12 +13,6 @@ from dotenv import load_dotenv
 load_dotenv()
 DISCORD_TOKEN = os.environ['discordkey']
 
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 intents = discord.Intents.default()
 intents.message_content = True
@@ -84,6 +78,7 @@ if __name__ == "__main__":
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
