@@ -23,12 +23,14 @@ intents.members = True
 bot = commands.Bot(command_prefix='ET?', intents=intents)
 
 app = FastAPI()
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
-uvicorn main:app --host 0.0.0.0 --port 8080 --reload
+if __name__ == "__main__":
+    # Get the port from the environment variable or use a default for local development
+    port = int(os.environ.get("PORT", 10000)) 
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 @bot.event
 async def on_ready():
@@ -81,13 +83,10 @@ async def on_command_error(ctx, error):
         msg = 'You are on cooldown, please try again in **{:.2f}**s.'.format(error.retry_after)
         await ctx.send(msg)
 
-if __name__ == "__main__":
-    # Get the port from the environment variable or use a default for local development
-    port = int(os.environ.get("PORT", 10000)) 
-    uvicorn.run(app, host="0.0.0.0", port=port)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
