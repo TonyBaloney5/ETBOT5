@@ -37,6 +37,14 @@ def run_discord_bot():
 
     @bot.command()
     @cooldown(1, 5, BucketType.user)
+    async def city(ctx):
+        citys = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
+                   "You have found a **Stick**.", "You have found a piece of **String**.", "You have found a bar of **Gold**.", "You have found a bar of **Iron**.", "You have found a **Diamond**."]
+        random_city = random.choice(citys)
+        await ctx.send(random_city)
+
+    @bot.command()
+    @cooldown(1, 5, BucketType.user)
     async def forest(ctx):
         forests = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
                    "You have found a **Stick**.", "You have found a **Stick**."]
@@ -93,6 +101,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
