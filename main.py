@@ -78,33 +78,28 @@ def run_discord_bot():
     @bot.command()
     @cooldown(1, 5, BucketType.user)
     async def forest(ctx):
-        forests = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
-                   "You have found a **Stick**.", "You have found a **Stick**."]
+        forests = ["You have found **Nothing**, did you even read..."]
         random_forest = random.choice(forests)
         await ctx.send(random_forest)
 
     @bot.command()
     @cooldown(1, 5, BucketType.user)
     async def river(ctx):
-        rivers = ["You have found a piece of **Leather**.", "You have found a piece of **Leather**.",
-                  "You have found a piece of **Leather**.", "You have found a piece of **string**."]
+        rivers = ["You have found **Nothing**, did you even read..."]
         random_river = random.choice(rivers)
         await ctx.send(random_river)
 
     @bot.command()
     @cooldown(1, 5, BucketType.user)
     async def cavern(ctx):
-        caverns = ["You have found a **Diamond**!", "You have found a bar of **Iron**.",
-                   "You have found a bar of **Iron**."]
+        caverns = ["You have found **Nothing**, did you even read..."]
         random_cavern = random.choice(caverns)
         await ctx.send(random_cavern)
 
     @bot.command()
     @cooldown(1, 5, BucketType.user)
     async def mineshaft(ctx):
-        mineshafts = ["You have found a bar of **Gold**.", "You have found a bar of **Iron**.",
-                      "You have found a bar of **Gold**.", "You have found a piece of **string**.",
-                      "You have found a piece of **string**."]
+        mineshafts = ["You have found **Nothing**, did you even read..."]
         random_mineshaft = random.choice(mineshafts)
         await ctx.send(random_mineshaft)
 
@@ -133,6 +128,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
