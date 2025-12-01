@@ -35,73 +35,9 @@ def run_discord_bot():
     async def text(ctx):
         reply = await ctx.send("test")
 
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def city(ctx):
-        citys = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
-                   "You have found a **Stick**.", "You have found a piece of **String**.", "You have found a bar of **Gold**.", "You have found a bar of **Iron**.", "You have found a **Diamond**."]
-        random_city = random.choice(citys)
-        await ctx.send(random_city)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def village(ctx):
-        villages = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
-                   "You have found a **Stick**.", "You have found a piece of **String**.", "You have found a bar of **Gold**.", "You have found a bar of **Iron**.", "You have found a **Diamond**."]
-        random_village = random.choice(villages)
-        await ctx.send(random_village)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def mansion(ctx):
-        mansions = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
-                   "You have found a **Stick**.", "You have found a piece of **String**.", "You have found a bar of **Gold**.", "You have found a bar of **Iron**.", "You have found a **Diamond**."]
-        random_mansion = random.choice(mansions)
-        await ctx.send(random_mansion)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def sea(ctx):
-        seas = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
-                   "You have found a **Stick**.", "You have found a piece of **String**.", "You have found a bar of **Gold**.", "You have found a bar of **Iron**.", "You have found a **Diamond**."]
-        random_sea = random.choice(seas)
-        await ctx.send(random_sea)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def jungle(ctx):
-        jungles = ["You have found an **Apple**.", "You have found a piece of **Leather**.",
-                   "You have found a **Stick**.", "You have found a piece of **String**.", "You have found a bar of **Gold**.", "You have found a bar of **Iron**.", "You have found a **Diamond**."]
-        random_jungle = random.choice(jungles)
-        await ctx.send(random_jungle)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def forest(ctx):
-        forests = ["You have found **Nothing**, did you even read..."]
-        random_forest = random.choice(forests)
-        await ctx.send(random_forest)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def river(ctx):
-        rivers = ["You have found **Nothing**, did you even read..."]
-        random_river = random.choice(rivers)
-        await ctx.send(random_river)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def cavern(ctx):
-        caverns = ["You have found **Nothing**, did you even read..."]
-        random_cavern = random.choice(caverns)
-        await ctx.send(random_cavern)
-
-    @bot.command()
-    @cooldown(1, 5, BucketType.user)
-    async def mineshaft(ctx):
-        mineshafts = ["You have found **Nothing**, did you even read..."]
-        random_mineshaft = random.choice(mineshafts)
-        await ctx.send(random_mineshaft)
+        @bot.command()
+    async def pull(ctx):
+        reply = await ctx.send("https://tenor.com/view/star-rail-pull-animation-honkai-star-rail-star-rail-pull-animation-gacha-animation-gif-16877364308822784938")
 
     @bot.command()
     async def Aidan(ctx):
@@ -128,6 +64,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
