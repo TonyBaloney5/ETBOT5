@@ -35,7 +35,7 @@ def run_discord_bot():
     async def text(ctx):
         reply = await ctx.send("test")
 
-        @bot.command()
+    @bot.command()
     async def pull(ctx):
         reply = await ctx.send("https://tenor.com/view/star-rail-pull-animation-honkai-star-rail-star-rail-pull-animation-gacha-animation-gif-16877364308822784938")
 
@@ -64,6 +64,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
