@@ -39,8 +39,13 @@ def run_discord_bot():
 
     @bot.command()
     @cooldown(1, 86400, BucketType.user)
-    async def text(ctx):
-        reply = await ctx.send("test")
+    async def dailies(ctx):
+        reply = await ctx.send("You have earned 60 <:StellarJade:1439756338673750066> from your dailies!")
+
+    @bot.command()
+    @cooldown(1, 57600, BucketType.user)
+    async def fulidailies(ctx):
+        reply = await ctx.send("May Fuli bless you! You have earned 60 <:StellarJade:1439756338673750066> from your dailies!")
 
     @bot.command()
     async def pull(ctx):
@@ -71,6 +76,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
