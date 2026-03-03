@@ -39,7 +39,7 @@ def run_discord_bot():
         
     @bot.command()
     async def event(ctx):        
-    events = ["__***MOVEMENT***__: Move **1 tile** forward.","__***MOVEMENT***__: Move **2 tiles** forward.","__***MOVEMENT***__: Move **3 tiles** forward.","__***MOVEMENT***__: Move **4 tiles** forward.",
+        events = ["__***MOVEMENT***__: Move **1 tile** forward.","__***MOVEMENT***__: Move **2 tiles** forward.","__***MOVEMENT***__: Move **3 tiles** forward.","__***MOVEMENT***__: Move **4 tiles** forward.",
 "__***MOVEMENT***__: Move **1 tile** backward.",
 "__***MOVEMENT***__: Move **2 tiles** backward.",
 "__***MOVEMENT***__: Move **3 tiles** backward.",
@@ -62,8 +62,8 @@ def run_discord_bot():
 "__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
 "__***MOVEMENT***__: Advance to the nearest **FLAG POST**. ",
 "__***MOVEMENT***__: Bonus roll! Use `ET?bonusroll` to roll again.",]
-    random_event = random.choice(events)
-    await ctx.send(random_event)
+        random_event = random.choice(events)
+        await ctx.send(random_event)
 
     @bot.command()
     async def Aidan(ctx):
@@ -90,6 +90,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
