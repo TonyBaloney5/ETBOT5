@@ -38,24 +38,32 @@ def run_discord_bot():
         await ctx.send(random_wish)
         
     @bot.command()
-    async def xipewish(ctx):
-        xipewishes = ["The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **BLUE LIGHT**.", "The train pulls in and is revealed to have **PURPLE LIGHT**. PING A HOST NOW!", "The train pulls in and is revealed to have **PURPLE LIGHT**. PING A HOST NOW!", "The train pulls in and is revealed to have **GOLD LIGHT**. PING A HOST NOW!", "The train pulls in and is revealed to have **PURPLE LIGHT**. PING A HOST NOW!", "The train pulls in and is revealed to have **PURPLE LIGHT**. PING A HOST NOW!", "The train pulls in and is revealed to have **GOLD LIGHT**. PING A HOST NOW!"]
-        random_xipewish = random.choice(xipewishes)
-        await ctx.send(random_xipewish)
-
-    @bot.command()
-    @cooldown(1, 86400, BucketType.user)
-    async def dailies(ctx):
-        reply = await ctx.send("You have earned 60 <:StellarJade:1439756338673750066> from your dailies!")
-
-    @bot.command()
-    @cooldown(1, 57600, BucketType.user)
-    async def fulidailies(ctx):
-        reply = await ctx.send("May Fuli bless you! You have earned 60 <:StellarJade:1439756338673750066> from your dailies!")
-
-    @bot.command()
-    async def pull(ctx):
-        reply = await ctx.send("https://tenor.com/view/star-rail-pull-animation-honkai-star-rail-star-rail-pull-animation-gacha-animation-gif-16877364308822784938")
+    async def event(ctx):        
+    events = ["__***MOVEMENT***__: Move **1 tile** forward.","__***MOVEMENT***__: Move **2 tiles** forward.","__***MOVEMENT***__: Move **3 tiles** forward.","__***MOVEMENT***__: Move **4 tiles** forward.",
+"__***MOVEMENT***__: Move **1 tile** backward.",
+"__***MOVEMENT***__: Move **2 tiles** backward.",
+"__***MOVEMENT***__: Move **3 tiles** backward.",
+"__***MOVEMENT***__: Move **4 tiles** backward.",
+"__***MOVEMENT***__: Move **1 tile** in any direction.",
+"__***MOVEMENT***__: Move **2 tiles** in any direction.",
+"__***MOVEMENT***__: Move **3 tiles** in any direction.",
+"__***MEDALS***__: Bet anywhere from **1-8 medals** and then pick **heads or tails**. If you pick correctly, you will **double your bet**. If you are wrong, you **lose your bet**.",
+"__***MEDALS***__: Gain **5 medals**!",
+"__***MEDALS***__: Gain **4 medals**!",
+"__***MEDALS***__: Gain **3 medals**!",
+"__***MEDALS***__: Gain **2 medals**!",
+"__***MEDALS***__: Gain **1 medal**!",
+"__***MEDALS***__: Lose **4 medals**...",
+"__***MEDALS***__: Lose **3 medals**...",
+"__***MEDALS***__: Lose **2 medals**...",
+"__***MEDALS***__: Lose **1 medal**...",
+"__***MEDALS***__: Take **2 medals** from any player on your tribe.",
+"__***MEDALS***__: Give **2 medals** to any player on your tribe.",
+"__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
+"__***MOVEMENT***__: Advance to the nearest **FLAG POST**. ",
+"__***MOVEMENT***__: Bonus roll! Use `ET?bonusroll` to roll again.",]
+    random_event = random.choice(events)
+    await ctx.send(random_event)
 
     @bot.command()
     async def Aidan(ctx):
@@ -82,6 +90,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
