@@ -48,6 +48,7 @@ def run_discord_bot():
 "__***MOVEMENT***__: Move **2 tiles** in any direction.",
 "__***MOVEMENT***__: Move **3 tiles** in any direction.",
 "__***MEDALS***__: Bet anywhere from **1-8 medals** and then pick **heads or tails**. If you pick correctly, you will **double your bet**. If you are wrong, you **lose your bet**.",
+"__***MEDALS***__: Gain **6 medals**!",
 "__***MEDALS***__: Gain **5 medals**!",
 "__***MEDALS***__: Gain **4 medals**!",
 "__***MEDALS***__: Gain **3 medals**!",
@@ -60,6 +61,8 @@ def run_discord_bot():
 "__***MEDALS***__: Take **2 medals** from any player on your tribe.",
 "__***MEDALS***__: Give **2 medals** to any player on your tribe.",
 "__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
+"__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
+"__***ITEM***__: Gain a random item.**. ",                  
 "__***MOVEMENT***__: Advance to the nearest **FLAG POST**. ",
 "__***MOVEMENT***__: Bonus roll! Use `ET?bonusroll` to roll again.",]
         random_event = random.choice(events)
@@ -131,6 +134,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
