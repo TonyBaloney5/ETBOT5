@@ -65,9 +65,9 @@ def run_discord_bot():
         random_event = random.choice(events)
         await ctx.send(random_event)
 
-        @bot.command()
-        async def roll(ctx): 
-            rolls = ["*You rolled a **1** and a **1** for a total of __**2**__!*",
+    @bot.command()
+    async def roll(ctx): 
+        rolls = ["*You rolled a **1** and a **1** for a total of __**2**__!*",
 "*You rolled a **1** and a **2** for a total of __**3**__!*",
 "*You rolled a **1** and a **3** for a total of __**4**__!*",
 "*You rolled a **1** and a **4** for a total of __**5**__!*",
@@ -103,8 +103,8 @@ def run_discord_bot():
 "*You rolled a **6** and a **4** for a total of __**10**__!*",
 "*You rolled a **6** and a **5** for a total of __**11**__!*",
 "*You rolled a **6** and a **6** for a total of __**12**__!*"]
-            random_roll = random.choice(rolls)
-            await ctx.send(random_roll)
+        random_roll = random.choice(rolls)
+        await ctx.send(random_roll)
 
     @bot.command()
     async def Aidan(ctx):
@@ -131,6 +131,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
