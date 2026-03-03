@@ -62,6 +62,8 @@ def run_discord_bot():
 "__***MEDALS***__: Give **2 medals** to any player on your tribe.",
 "__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
 "__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
+"__***MOVEMENT***__: Advance to the nearest **BANK**. ",
+"__***MOVEMENT***__: Advance to the nearest **BANK**. ",                
 "__***ITEM***__: Gain a random item.**. ",                  
 "__***MOVEMENT***__: Advance to the nearest **FLAG POST**. ",
 "__***MOVEMENT***__: Bonus roll! Use `ET?bonusroll` to roll again.",]
@@ -134,6 +136,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
