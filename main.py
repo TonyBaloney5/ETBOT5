@@ -111,7 +111,7 @@ def run_discord_bot():
 "*You rolled a **6** and a **6** for a total of __**12**__!*"]
         random_roll = random.choice(rolls)
         await ctx.send(random_roll)
-|
+        
     @bot.command()
     async def bonusroll(ctx): 
         bonusrolls = ["*You rolled a **1** and a **1** for a total of __**2**__!*",
@@ -178,6 +178,7 @@ uvicorn.run(app, host="0.0.0.0", port=10000)
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN,log_handler=handler, log_level=logging.DEBUG)
+
 
 
 
