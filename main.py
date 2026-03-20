@@ -79,7 +79,7 @@ def run_discord_bot():
 "__***MOVEMENT***__: Advance to the nearest **PIT STOP**. ",
 "__***MOVEMENT***__: Advance to the nearest **BANK**. ",
 "__***MOVEMENT***__: Advance to the nearest **BANK**. ",                
-"__***ITEM***__: Gain a random item.**. ",                  
+"__***ITEM***__: Use `ET?bonusroll` to gain a random item.**. ",                  
 "__***MOVEMENT***__: Advance to the nearest **FLAG POST**. ",
 "__***MOVEMENT***__: READ CAREFULLY. You have an opportunity to swap to another tribe of your choosing for the price of **5 MEDALS**. If you choose to swap, you will swap at the start of the next immunity challenge. Ping the HOSTS with your decision. ",
 "__***MOVEMENT***__: Bonus roll! Use `ET?bonusroll` to roll again.",]
