@@ -75,9 +75,6 @@ def run_discord_bot():
 "__***MOVEMENT***__: Give any teammate **-1** to their next dice roll.",
 "__***MOVEMENT***__: Give any teammate **-2** to their next dice roll.",
 "__***MOVEMENT***__: Give any teammate **-3** to their next dice roll.",
-"__***MOVEMENT***__: Give any teammate **-4** to their next dice roll.",
-"__***MOVEMENT***__: Give any teammate **-5** to their next dice roll.",
-"__***MOVEMENT***__: Give any teammate **-6** to their next dice roll.",
 "__***MEDALS***__: Gain **3 medals**!",
 "__***MEDALS***__: Gain **2 medals**!",
 "__***MEDALS***__: Gain **1 medal**!",
@@ -102,7 +99,7 @@ def run_discord_bot():
         await ctx.send(random_event)
 
     @bot.command()
-    @cooldown(1, 86400, BucketType.user)
+    @cooldown(1, 57600, BucketType.user)
     async def roll(ctx): 
         rolls = ["*You rolled a **1** and a **1** for a total of __**2**__!*",
 "*You rolled a **1** and a **2** for a total of __**3**__!*",
